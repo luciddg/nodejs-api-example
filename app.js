@@ -39,7 +39,7 @@ var authorization_uri = oauth2.authCode.authorizeURL({
   state: 'simple_state'
 });
  
-// Initial page redirecting to Github 
+// Initial page redirecting to BuildingOS 
 app.get('/auth', function (req, res) {
     res.redirect(authorization_uri);
 });
@@ -71,10 +71,12 @@ app.get('/callback', function (req, res) {
 
 });
  
+// root of the app. Just has a link to kick off the auth process
 app.get('/', function (req, res) {
   res.render('index', { title: 'Hey', message: 'Hello there!'});
 });
 
+// Lists the buildings for the current user
 app.get('/buildings', function (req, res){
   console.log('Session Auth Token', req.session.access_token);
   var buildings = [];
@@ -92,10 +94,12 @@ app.get('/buildings', function (req, res){
   });
 });
 
+// Experiment with Chart.js
 app.get('/chart_demo', function (req, res){
   res.render('chart_demo', {title: 'Demo'});
 });
 
+// Experiment with generating data readings for charting demo
 app.get('/data', function (req, res){
   var moment = require('moment');
   require('moment-range');
@@ -115,6 +119,7 @@ app.get('/data', function (req, res){
   res.json({"data": readings});
 });
  
+// starting up the app and logging the address/port
 var server = app.listen(3000, function () {
 
   var host = server.address().address;
