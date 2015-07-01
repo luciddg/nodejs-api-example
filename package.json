@@ -1,0 +1,21 @@
+{
+  "name": "building_viewer",
+  "version": "1.0.0",
+  "description": "Simple BuildingOS data viewer",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.12.4",
+    "express-session": "^1.11.3",
+    "jade": "^1.10.0",
+    "moment": "^2.10.3",
+    "moment-range": "^2.0.2",
+    "request": "^2.57.0",
+    "simple-oauth2": "^0.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
+}
