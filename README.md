@@ -1,6 +1,7 @@
 ## Example BuildingOS Oauth2 Client
 A simple webapp that shows information from BuildingOS
 
+In this app you are able to:
 - Login with OAuth2
 - Show list of buildings
 - TODO: Select one from list
