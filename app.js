@@ -21,7 +21,7 @@ app.use(session({
  
 // Our custom app configs
 // Contains Oauth2 key/secret
-var config = require('./config.json');
+var config = require('./config_example.json');
 
 var oauth2 = require('simple-oauth2')({
   clientID: config.client_id,
