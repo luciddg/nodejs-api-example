@@ -18,7 +18,7 @@ app.use(session({
   resave: false,
   saveUninitialized: true
 }))
- 
+
 // Our custom app configs
 // Contains Oauth2 key/secret
 var config = require('./config.json');
@@ -31,20 +31,20 @@ var oauth2 = require('simple-oauth2')({
   tokenPath: '/o/token/',
   revocationPath: '/oauth2/revoke/'
 });
- 
-// Authorization uri definition 
+
+// Authorization uri definition
 var authorization_uri = oauth2.authCode.authorizeURL({
   redirect_uri: 'http://localhost:3000/callback',
   scope: 'read',
   state: 'simple_state'
 });
- 
-// Initial page redirecting to BuildingOS 
+
+// Initial page redirecting to BuildingOS
 app.get('/auth', function (req, res) {
     res.redirect(authorization_uri);
 });
- 
-// Callback service parsing the authorization token and asking for the access token 
+
+// Callback service parsing the authorization token and asking for the access token
 app.get('/callback', function (req, res) {
   var code = req.query.code;
   console.log('/callback');
@@ -53,12 +53,12 @@ app.get('/callback', function (req, res) {
     code: code,
     redirect_uri: 'http://localhost:3000/callback'
   }, saveToken);
- 
+
   function saveToken(error, result) {
     console.log('result', util.inspect(result));
     console.log('error', util.inspect(error));
-    if (error) { 
-      console.log('Access Token Error', error.message); 
+    if (error) {
+      console.log('Access Token Error', error.message);
     }
     else {
       // stash the token in the user session
@@ -70,7 +70,7 @@ app.get('/callback', function (req, res) {
   }
 
 });
- 
+
 // root of the app. Just has a link to kick off the auth process
 app.get('/', function (req, res) {
   res.render('index', { title: 'Hey', message: 'Hello there!'});
@@ -89,7 +89,7 @@ app.get('/buildings', function (req, res){
   request(options, function (error, response, body) {
     if (!error && response.statusCode == 200) {
       buildings = JSON.parse(body).data;
-      res.render('buildings', {title: 'Bulidings', buildings: buildings});
+      res.render('buildings', {title: 'Buildings', buildings: buildings});
     }
   });
 });
@@ -113,12 +113,12 @@ app.get('/data', function (req, res){
     var vals = {'a':1, 'b': 2, 'c': 3};
     var ts_reading = {};
     ts_reading[ts] = vals;
-    readings.push(ts_reading); 
-  }); 
-  
+    readings.push(ts_reading);
+  });
+
   res.json({"data": readings});
 });
- 
+
 // starting up the app and logging the address/port
 var server = app.listen(3000, function () {
 

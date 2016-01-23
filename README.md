@@ -6,4 +6,4 @@ In this app you are able to:
 - Show list of buildings
 - TODO: Select one from list
 - TODO: View Building with all meters
-- TODO: Each meter should have an the type of resource and the most recent reading. 
+- TODO: Each meter should have the type of resource and the most recent reading. 
