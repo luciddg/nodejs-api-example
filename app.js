@@ -89,7 +89,7 @@ app.get('/buildings', function (req, res){
   request(options, function (error, response, body) {
     if (!error && response.statusCode == 200) {
       buildings = JSON.parse(body).data;
-      res.render('buildings', {title: 'Bulidings', buildings: buildings});
+      res.render('buildings', {title: 'Buildings', buildings: buildings});
     }
   });
 });
