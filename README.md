@@ -1,5 +1,5 @@
-## Example BuildingOS Oauth2 Client
-A simple webapp that shows information from BuildingOS
+## BuildingOS API Node.js Example
+A simple webapp that shows information from BuildingOS using an OAuth2 Client
 
 In this app you are able to:
 - Login with OAuth2
