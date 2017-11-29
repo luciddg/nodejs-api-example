@@ -1,4 +1,5 @@
 {
+  "api_host": "https://api.buildingos.com",
   "client_id": "PUT_CLIENT_ID_HERE",
   "client_secret": "PUT_CLIENT_SECRET_HERE"
 }
