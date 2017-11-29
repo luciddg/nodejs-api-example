@@ -1,10 +1,10 @@
 ## Example BuildingOS Oauth2 Application
-An exampled web application that retrieves building data from BuildingOS via Oauth2 authentication.
+An example web application that retrieves building data from BuildingOS via Oauth2 authentication.
 
 ## Prerequisites
-- A BuildingOS user account
+- A BuildingOS user account (https://buildingos.com)
 - Some buildings in your organization
-- An API Client of type "Authorization code" (See https://buildingos.com/developers/)
+- An API Client of type "Authorization code". See https://buildingos.com/developers/
 
 ## Installation
 ```
