@@ -1,6 +1,6 @@
 {
   "name": "building_viewer",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Simple BuildingOS data viewer",
   "main": "app.js",
   "dependencies": {
