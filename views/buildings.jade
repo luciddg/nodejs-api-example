@@ -1,8 +1,11 @@
+link(href='./css/styles.css', rel='stylesheet')
 html
   head
     title!= title
   body
-    h1 Buildings
+    h2 Buildings
+    a(href='/') Home
     ul
-      each val in buildings 
-        li= val.name
+      each val in buildings
+        li
+          a(href='/buildings/' + val.id) #{val.name}

@@ -1,19 +1,21 @@
 {
   "name": "building_viewer",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "Simple BuildingOS data viewer",
   "main": "app.js",
   "dependencies": {
-    "express": "^4.12.4",
-    "express-session": "^1.11.3",
-    "jade": "^1.10.0",
-    "moment": "^2.10.3",
-    "moment-range": "^2.0.2",
-    "request": "^2.57.0",
-    "simple-oauth2": "^0.2.1"
+    "bunyan": "^1.8.12",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "jade": "^1.11.0",
+    "moment": "^2.19.3",
+    "moment-range": "^3.0.3",
+    "request": "^2.83.0",
+    "simple-oauth2": "^1.4.0"
   },
   "devDependencies": {},
   "scripts": {
+    "start": "node app.js | ./node_modules/bunyan/bin/bunyan",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
