@@ -1,3 +1,5 @@
+**Note**: This repo is deprecated. Please work against https://github.com/buildingos/buildingos-api-nodejs-example
+
 ## BuildingOS API Node.js Example
 A simple webapp that shows information from BuildingOS using an OAuth2 Client
 
