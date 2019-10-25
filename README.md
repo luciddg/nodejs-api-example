@@ -1,5 +1,5 @@
-## Example BuildingOS Oauth2 Application
-An example web application that retrieves building data from BuildingOS via Oauth2 authentication.
+## BuildingOS API Node.js Example
+A simple webapp that shows information from BuildingOS using an OAuth2 Client
 
 ## Prerequisites
 - A BuildingOS user account (https://buildingos.com)
@@ -23,12 +23,3 @@ Start the application:
 npm start
 ```
 Point your browser at http://127.0.0.1:3000
-
-In this app you are able to:
-- Login with OAuth2
-- Show list of buildings
-- Select one from list and see a detail view
-
-TODO
-- View Building with all meters
-- Each meter should have an the type of resource and the most recent reading.
